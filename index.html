@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <main class="main-controler">
+        <div class="main-form-container" id="mainFormContainer">
+            <h3 class="sign-in-text">Sign in</h3>
+            <div class="buttons-container">
+                <a href="#" class="personal-button active" id="personalButton" name="personal">Personal</a>
+                <a href="#" class="team-button" id="teamButton" name="team">Team</a>
+            </div>
+                <div  class="formular">
+                    <form action="#">
+                        <label for="email" class="email-label">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                        <div class="password-container">
+                            <label for="password" class="password-label">Password</label>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                        <input type="password" id="password" placeholder="Enter your password">
+                        <button type="submit" class="sign-in-button">Sign In</button>
+                    </form>
+                </div>
+            <footer class="main-footer">
+                <div class="main-footer-container">
+                    <p class="footer-text">Don't have an account yet?</p>
+                    <button class="sign-up-button" id="signUpButton">Sign Up</button>
+                </div>
+            </footer>
+        </div>
+        <!-- Pop-up model -->
+        <div class="main-pop-up-container" id="popUpContainer">
+            <h3 class="register-text">Create an account</h3>
+            <div class="formular-register">
+                <form action="#">
+                    <label for="username" class="username-label">Username</label>
+                    <input type="text" id="username" placeholder="Enter an username">
+                    <label for="email-register" class="email-register-label">Email Address</label>
+                    <input type="email" id="email-register" placeholder="Enter an username">
+                    <label for="firstname" class="firstname-label">First Name</label>
+                    <input type="text" id="firstname" placeholder="Enter your first name">
+                    <label for="lastname" class="lastname-label">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Enter your last name">
+                    <label for="password-register" class="password-register-label">Password</label>
+                    <input type="password" id="password-register" placeholder="Enter your password">
+                    <label for="confirm" class="confirm-label">Confirm Password</label>
+                    <input type="password" id="confirm" placeholder="Confirm your password">
+                    <button type="submit" class="register-button">Register</button>
+                </form>
+            </div>
+            <footer class="pop-up-footer">
+                <a href="" class="back-button" id="backButton"><-Back to Sign Up</a>
+            </footer>
+        </div>
+        <!-- end of pop-ul model -->
+        <!-- toast notification -->
+        <div class="toast-container" id="toastContainer"></div>
+        <!-- end of toast notification -->
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --deep-ocean: #14163E;
+    --pure-pink: #F03B7A;
+    --light-grey: #FAFAFB;
+    --dark-grey: #AEB0BF;
+    --darker-grey: #747C92;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.main-controler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Form Styles */
+.main-form-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    width: 800px;
+    background-color: var(--deep-ocean);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+    position: relative;
+    
+}
+
+.sign-in-text {
+    color: var(--light-grey);
+    font-weight: 300;
+    margin: 50px 0;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.formular, .formular-register {
+    display: flex;
+    flex-direction: column;
+    width: 301px;
+}
+
+.personal-button {
+    display: block;
+    width: 148px;
+    margin-right: 5px;
+    padding: 5px 50px;
+    font-size: 0.7rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.068);
+    text-decoration: none;
+    color: var(--light-grey);
+}
+
+.team-button {
+    display: block;
+    width: 148px;
+    padding: 5px 50px;
+    font-size: 0.7rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.068);
+    text-decoration: none;
+    color: var(--light-grey);
+}
+
+/* js Command */
+.active {
+    color: var(--pure-pink);
+}
+/*  */
+
+.email-label{
+    display: block;
+    margin-top: 50px;
+    font-size: 0.8rem;
+    color: var(--dark-grey);
+}
+
+#email, #password {
+    margin-top: 5px;
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    background-color: rgba(0, 0, 0, 0.123);
+    caret-color: var(--darker-grey);
+    color: var(--dark-grey)
+}
+
+#email::placeholder, #password::placeholder{
+    color: var(--darker-grey);
+}
+
+#email:focus::placeholder, #password:focus::placeholder{
+    color: transparent;
+}
+
+.password-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.password-label {
+    display: block;
+    margin-top: 25px;
+    font-size: 0.8rem;
+    color: var(--dark-grey);
+    position: relative;
+}
+
+.forgot-password{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.65rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: var(--pure-pink)
+}
+
+.sign-in-button {
+    margin-top: 25px;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.85rem;
+    font-family: inherit;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: var(--pure-pink);
+    color: var(--light-grey);
+}
+
+.main-footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color:rgba(255, 255, 255, 0.068);
+    width: 100%;
+    height: 80px;
+}
+
+.sign-up-button {
+    padding: 5px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    border: none;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--light-grey);
+    background-color: var(--pure-pink);
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: var(--dark-grey);
+}
+/*  */
+
+/* Pop-ul Model Styles */
+.main-pop-up-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 650px;
+    width: 500px;
+    background-color: var(--deep-ocean);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+    /* js Command */
+    display: none;
+}
+
+.register-text {
+    color: var(--light-grey);
+    font-weight: 300;
+    margin: 25px 0;
+}
+
+.username-label, .email-register-label, .firstname-label,
+.lastname-label, .password-register-label, .confirm-label{
+    display: block;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: var(--dark-grey);
+}
+
+#username, #email-register, #firstname, 
+#lastname, #password-register, #confirm {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    background-color: rgba(0, 0, 0, 0.123);
+    caret-color: var(--darker-grey);
+    color: var(--dark-grey)
+}
+
+#username::placeholder, #email-register::placeholder
+, #firstname::placeholder, #lastname::placeholder, 
+#password-register::placeholder, #confirm::placeholder {
+    color: var(--darker-grey);
+}
+
+#username:focus::placeholder, #email-register:focus::placeholder, 
+#firstname:focus::placeholder, #lastname:focus::placeholder, 
+#password-register:focus::placeholder, #confirm:focus::placeholder {
+    color: transparent;
+}
+
+.register-button {
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.85rem;
+    font-family: inherit;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: var(--pure-pink);
+    color: var(--light-grey);
+}
+
+.pop-up-footer{
+    margin-top: 7px;
+}
+
+.back-button {
+    font-size: 0.65rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: var(--pure-pink)
+}
+
+.back-button:hover{
+    color: var(--light-grey);
+    transition: all 0.8s;
+}
+
+/* Toast notification styles */
+.toast-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.toast {
+    font-size: 0.7rem;
+    background-color: var(--deep-ocean);
+    padding: 1.2rem;
+    border-radius: 10px 30px 5px;
+    color: var(--light-grey);
+    margin: 1rem;
+
+}
+
+
