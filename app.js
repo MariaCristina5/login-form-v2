@@ -1,9 +1,11 @@
 //General
 const mainFormContainer = document.getElementById("mainFormContainer");
 const popUpContainer = document.getElementById("popUpContainer");
+const forgotPassContainer = document.getElementById("forgotPassContainer");
 const signUpBtn = document.getElementById("signUpButton");
 const personalBtn = document.getElementById("personalButton");
 const teamBtn = document.getElementById("teamButton");
+const forgotBtn = document.getElementById("forgotButton")
 
 //Notification
 const toastContainer = document.getElementById('toastContainer');
@@ -24,6 +26,10 @@ teamBtn.addEventListener("click", () => {
     teamBtn.classList.add("active");
 })
 
+forgotBtn.addEventListener("click", () => {
+    forgotPassContainer.style.display = "flex";
+    mainFormContainer.style.display = "none";
+})
 
 //Notification (creating div container) and the Event
 signUpBtn.addEventListener("click", () =>{

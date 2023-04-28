@@ -191,7 +191,7 @@ body {
     align-items: center;
     flex-direction: column;
     height: 650px;
-    width: 500px;
+    width: 600px;
     background-color: var(--deep-ocean);
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
@@ -284,4 +284,63 @@ body {
 
 }
 
+/* Forgot password model Styles */
+.forgot-password-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 310px;
+    width: 600px;
+    background-color: var(--deep-ocean);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+    /* js Command */
+    display: none;
+}
 
+.recover-text {
+    color: var(--light-grey);
+    font-weight: 300;
+    margin: 40px 0;
+}
+
+.retype-email-label {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: var(--dark-grey);
+}
+
+#retype-email {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    background-color: rgba(0, 0, 0, 0.123);
+    caret-color: var(--darker-grey);
+    color: var(--dark-grey)
+}
+
+#retype-email::placeholder {
+    color: var(--darker-grey);
+}
+
+#retype-email:focus::placeholder {
+    color: transparent;
+}
+
+.send-mail-button {
+    margin-top: 25px;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.85rem;
+    font-family: inherit;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: var(--pure-pink);
+    color: var(--light-grey);
+}
