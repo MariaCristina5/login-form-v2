@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Login Form</title>
 </head>
 <body>
@@ -18,12 +19,14 @@
                 <div  class="formular">
                     <form action="#">
                         <label for="email" class="email-label">Email Address</label>
-                        <input type="email" id="email" placeholder="Enter your email">
+                        <input type="email" id="email" placeholder="Enter your email" onkeyup="validateEmail()">
+                        <span class="email-error error-message"></span>
                         <div class="password-container">
                             <label for="password" class="password-label">Password</label>
                             <a href="#" class="forgot-password" id="forgotButton">Forgot password?</a>
                         </div>
-                        <input type="password" id="password" placeholder="Enter your password">
+                        <input type="password" id="password" placeholder="Enter your password" onkeyup="validatePass()">
+                        <span class="password-error error-message"></span>
                         <button type="submit" class="sign-in-button">Sign In</button>
                     </form>
                 </div>
@@ -40,17 +43,20 @@
             <div class="formular-register">
                 <form action="#">
                     <label for="username" class="username-label">Username</label>
-                    <input type="text" id="username" placeholder="Enter an username">
+                    <input type="text" id="username" placeholder="Enter an username" onkeyup="validateUsername()">
+                    <span class="username-error error-message"></span>
+                    <label for="fullname" class="fullname-label">Full Name</label>
+                    <input type="text" id="fullname" placeholder="Enter your name" onkeyup="validateName()">
+                    <span class="fullname-error error-message"></span>
                     <label for="email-register" class="email-register-label">Email Address</label>
-                    <input type="email" id="email-register" placeholder="Enter your email">
-                    <label for="firstname" class="firstname-label">First Name</label>
-                    <input type="text" id="firstname" placeholder="Enter your first name">
-                    <label for="lastname" class="lastname-label">Last Name</label>
-                    <input type="text" id="lastname" placeholder="Enter your last name">
+                    <input type="email" id="email-register" placeholder="Enter your email" onkeyup="validateEmailReg()">
+                    <span class="emailreg-error error-message"></span>
                     <label for="password-register" class="password-register-label">Password</label>
-                    <input type="password" id="password-register" placeholder="Enter your password">
+                    <input type="password" id="password-register" placeholder="Enter your password" onkeyup="validatePassReg()">
+                    <span class="passreg-error error-message"></span>
                     <label for="confirm" class="confirm-label">Confirm Password</label>
-                    <input type="password" id="confirm" placeholder="Confirm your password">
+                    <input type="password" id="confirm" placeholder="Confirm your password" onkeyup="validateConfirm()">
+                    <span class="confirm-error error-message"></span>
                     <button type="submit" class="register-button">Register</button>
                 </form>
             </div>
@@ -59,21 +65,21 @@
             </footer>
         </div>
         <!-- end of pop-ul model -->
-        <!-- toast notification -->
-        <div class="toast-container" id="toastContainer"></div>
-        <!-- end of toast notification -->
         <!-- Forgot password model -->
         <div class="forgot-password-container" id="forgotPassContainer">
             <h3 class="recover-text">Recover your password</h3>
             <div class="formular-register">
                 <form action="#">
                     <label for="retype-email" class="retype-email-label">Email Address</label>
-                    <input type="email" id="retype-email" placeholder="Enter your email">
+                    <input type="email" id="retype-email" placeholder="Enter your email" onkeyup="validateRetypeMail()">
+                    <span class="retype-email-error error-message"></span>
                     <button type="submit" class="send-mail-button">Send mail</button>
                 </form>
             </div>
             <footer class="pop-up-footer">
-                <a href="" class="back-button" id="backButton"><-Back to Sign In</a>
+                    <a href="" class="back-button" id="backButton"><-Back to Sign In</a>
+                
+                
             </footer>
         </div>
         <!-- end of forgot password model -->

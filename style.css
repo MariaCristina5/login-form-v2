@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
 * {
     margin: 0;
@@ -55,6 +55,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 301px;
+    position: relative;
 }
 
 .personal-button {
@@ -190,7 +191,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 650px;
+    height: 615px;
     width: 600px;
     background-color: var(--deep-ocean);
     border-radius: 8px;
@@ -202,19 +203,19 @@ body {
 .register-text {
     color: var(--light-grey);
     font-weight: 300;
-    margin: 25px 0;
+    margin: 45px 0;
 }
 
-.username-label, .email-register-label, .firstname-label,
-.lastname-label, .password-register-label, .confirm-label{
+.username-label, .email-register-label, .fullname-label,
+.password-register-label, .confirm-label{
     display: block;
     margin-top: 15px;
     font-size: 0.8rem;
     color: var(--dark-grey);
 }
 
-#username, #email-register, #firstname, 
-#lastname, #password-register, #confirm {
+#username, #email-register, #fullname, 
+#password-register, #confirm {
     margin-top: 5px;
     width: 100%;
     padding: 10px;
@@ -225,15 +226,15 @@ body {
     color: var(--dark-grey)
 }
 
-#username::placeholder, #email-register::placeholder
-, #firstname::placeholder, #lastname::placeholder, 
-#password-register::placeholder, #confirm::placeholder {
+#username::placeholder, #email-register::placeholder,
+#fullname::placeholder, #password-register::placeholder, 
+#confirm::placeholder {
     color: var(--darker-grey);
 }
 
 #username:focus::placeholder, #email-register:focus::placeholder, 
-#firstname:focus::placeholder, #lastname:focus::placeholder, 
-#password-register:focus::placeholder, #confirm:focus::placeholder {
+#fullname:focus::placeholder, #password-register:focus::placeholder, 
+#confirm:focus::placeholder {
     color: transparent;
 }
 
@@ -267,29 +268,13 @@ body {
     transition: all 0.8s;
 }
 
-/* Toast notification styles */
-.toast-container {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-
-.toast {
-    font-size: 0.7rem;
-    background-color: var(--deep-ocean);
-    padding: 1.2rem;
-    border-radius: 10px 30px 5px;
-    color: var(--light-grey);
-    margin: 1rem;
-
-}
-
 /* Forgot password model Styles */
 .forgot-password-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    position: relative;
     height: 310px;
     width: 600px;
     background-color: var(--deep-ocean);
@@ -344,3 +329,51 @@ body {
     background-color: var(--pure-pink);
     color: var(--light-grey);
 }
+
+
+/* Error message styles */
+.error-message {
+    position: absolute;
+    right: 10px;
+    color: var(--pure-pink);
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+
+.fa-circle-check {
+    color: var(--pure-pink);
+    font-size: 0.85rem;
+}
+
+.email-error {
+    top: 90px;
+} 
+
+.password-error {
+    bottom: 90px;
+}
+
+.username-error {
+    top: 47px;
+}
+
+.emailreg-error {
+    top: 197px; 
+}
+
+.fullname-error {
+    top: 122px;
+}
+
+.passreg-error {
+    bottom: 155px;
+}
+
+.confirm-error {
+    bottom: 80px;
+}
+
+.retype-email-error {
+    bottom: 85px;
+}
+
